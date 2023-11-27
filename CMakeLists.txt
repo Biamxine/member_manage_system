@@ -16,6 +16,7 @@ aux_source_directory("${PROJECT_SOURCE_DIR}/src" mySources)
 add_executable (member_manage_system ${mySources})
 
 #编译转码成GBK可执行文件，方便在Windows测试
+#若系统编码不是GBK可以删掉下面这一行
 target_compile_options(member_manage_system PRIVATE -fexec-charset=GBK)
 
 #目标执行文件生成在项目目录下的bin目录
